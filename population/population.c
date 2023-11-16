@@ -45,10 +45,11 @@ label1:
 int calculation(int startsize, int endsize)
 {
     int years = 0;
-    
+
+    // total year(s) to reach end size (population)
     while (startsize < endsize)
     {
-        // population born each year(s)
+
         startsize = startsize + (startsize / 3) - (startsize / 4);
         years++;
     }
