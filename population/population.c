@@ -54,10 +54,9 @@ int calculation(int startsize, int endsize)
     int n1 = 0, m1 = 0, l1 = 0;
     int count = 0;
 
-    while (l < endsize)
+    while (l <= endsize)
     {
-        // Total years to reach end size
-        count = count + 1;
+
 
         // population born each year(s)
         n1 = l / 3;
@@ -66,6 +65,9 @@ int calculation(int startsize, int endsize)
         // Total population of each year(s)
         l1 = l + n1 - m1;
         l = l1;
+        // Total years to reach end size
+        count = count + 1;
+        
         // if ()
         // {
         //     break;
