@@ -44,34 +44,35 @@ label1:
 
 int calculation(int startsize, int endsize)
 {
-    // population born a year
-    int n = startsize / 3;
-    // population died a year
-    int m = startsize / 4;
-    // Total a year
-    int l = startsize + n - m;
+    // // population born a year
+    // int n = startsize / 3;
+    // // population died a year
+    // int m = startsize / 4;
+    // // Total a year
+    // int l = startsize + n - m;
 
-    int n1 = 0, m1 = 0, l1 = 0;
-    int count = 0;
+    // int n1 = 0, m1 = 0, l1 = 0;
+    int years = 0;
 
-    while (l <= endsize)
+    while (startsize < endsize)
     {
 
 
         // population born each year(s)
-        n1 = l / 3;
+        startsize = startsize + (startsize / 3) - (startsize / 4);
+        years++;
         // population died each year(s)
-        m1 = l / 4;
-        // Total population of each year(s)
-        l1 = l + n1 - m1;
-        l = l1;
+        // m1 = l / 4;
+        // // Total population of each year(s)
+        // l1 = l + n1 - m1;
+        // l = l1;
         // Total years to reach end size
-        count = count + 1;
-        
+
+
         // if ()
         // {
         //     break;
         // }
     }
-    return l;
+    return years;
 }
