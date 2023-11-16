@@ -45,7 +45,7 @@ label1:
 int calculation(int startsize, int endsize)
 {
     int years = 0;
-
+    
     while (startsize < endsize)
     {
         // population born each year(s)
