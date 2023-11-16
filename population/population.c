@@ -66,7 +66,7 @@ int calculation(int startsize, int endsize)
         // Total population of each year(s)
         l1 = l + n1 - m1;
         l = l1;
-        if (l >= endsize)
+        if (l < endsize)
         {
             break;
         }
