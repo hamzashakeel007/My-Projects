@@ -18,10 +18,10 @@ int main(void)
 
 int get_ssize(void)
 {
-    int n = 0.0;
+    int n = 0;
 
 label:
-    n = get_float("Minimun start size should be greater or equal to 9: ");
+    n = get_int("Minimun start size should be greater or equal to 9: ");
     if (n < 9)
     {
         goto label;
@@ -31,10 +31,10 @@ label:
 
 int get_esize(int startsize)
 {
-    int n = 0.0;
+    int n = 0;
 
 label1:
-    n = get_float("End size should be greater or equal to start size: ");
+    n = get_int("End size should be greater or equal to start size: ");
     if (n < startsize)
     {
         goto label1;
