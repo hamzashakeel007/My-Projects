@@ -23,8 +23,14 @@ int main(void)
 
         else
         {
-            goto label;
+            goto label0;
         }
     }
 
+    label0:
+    for (int i = 0, , i++)
+    {
+        printf("# #");
+
+    }
 }
