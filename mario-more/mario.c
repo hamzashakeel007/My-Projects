@@ -3,5 +3,28 @@
 
 int main(void)
 {
-    int height = get_int("Enter height for mario's pyramid \n");
+    //Pyramid height input
+    int height = get_int("Enter height for mario's pyramid: \n");
+
+    //Algorthm for building pyramid
+
+    label:
+    while(true)
+    {
+        if (height < 1)
+        {
+            goto label;
+        }
+
+        else if (height > 8)
+        {
+            goto label;
+        }
+
+        else
+        {
+            goto label;
+        }
+    }
+
 }
