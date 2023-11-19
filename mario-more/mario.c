@@ -28,7 +28,7 @@ int main(void)
     }
 
     label0:
-    for (int i = 0, height = i, i++)
+    for (int i = 0; height == i; i++)
     {
         printf("# #");
 
