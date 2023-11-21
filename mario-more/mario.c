@@ -1,36 +1,39 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void pyramid(void);
+
 int main(void)
 {
-    //Pyramid height input
-    int height = get_int("Enter height for mario's pyramid: \n");
-
     //Algorthm for building pyramid
+    pyramid();
+}
 
-    label:
-    while(true)
+
+
+void pyramid(void)
+{
+    // Pyramid height input
+    int height = 0;
+
+    while ( (height < 1) || (height > 8) )
     {
-        if (height < 1)
-        {
-            goto label;
-        }
-
-        else if (height > 8)
-        {
-            goto label;
-        }
-
-        else
-        {
-            goto label0;
-        }
+        height = get_int("Enter height for mario's pyramid: \n");
     }
 
-    label0:
-    for (int i = 0; height == i; i++)
+    for (int i = 0; i < height; ++i)
     {
-        printf("# #");
-
+        for (int j = 0; j < height+i+3; ++j)
+        {
+            if ( (j == height) || (j == height+1) || (i+j < height-1) )
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("#");
+            }
+        }
+        printf("\n");
     }
 }
