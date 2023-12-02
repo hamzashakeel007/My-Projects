@@ -14,21 +14,20 @@ int main(void)
     {
         //Converting into decimal
         int decimal = message[i];
-
+        int binary = 0;
         //Converting into binary
         for (int j = 0; j < BITS_IN_BYTE; i++)
         {
-            int quotient = decimal = decimal / 10;
+            int divide = decimal = decimal / 10;
+            binary[j] = binary % 2;
 
-            if (divide % 2 == 0)
+            if (binary[j] % 2 == 0)
             {
-                int bit = arr[BITS_IN_BYTE] = 0;
                 print_bulb(bit);
             }
 
             else
             {
-                int bit = arr[BITS_IN_BYTE] = 1;
                 print_bulb(bit);
             }
         }
