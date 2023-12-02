@@ -23,14 +23,16 @@ int main(void)
 
             if (divide % 2 == 0)
             {
-                arr[BITS_IN_BYTE] = 0;
+                int bit = arr[BITS_IN_BYTE] = 0;
+                print_bulb(bit);
             }
 
             else
             {
-                arr[BITS_IN_BYTE] = 1;
+                int bit = arr[BITS_IN_BYTE] = 1;
+                print_bulb(bit);
             }
-            print_bulb(bit);
+
         }
         while (decimal > 0);
 
