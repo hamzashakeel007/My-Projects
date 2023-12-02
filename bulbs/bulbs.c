@@ -16,7 +16,11 @@ int main(void)
         int decimal = message[i];
 
         //Converting into binary
-        int arr[BITS_IN_BYTE] = {0, 0, 0, 0, 0, 0, 0, 0};
+        int arr[BITS_IN_BYTE];
+        if (decimal % 2 == 0)
+        {
+            
+        }
     }
 }
 
