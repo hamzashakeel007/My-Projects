@@ -22,15 +22,17 @@ int main(void)
             int divide = decimal = decimal / 10;
 
             if (divide % 2 == 0)
-        {
-            arr[BITS_IN_BYTE] = 0;
-        }
+            {
+                arr[BITS_IN_BYTE] = 0;
+            }
 
-        else
-        {
-            arr[BITS_IN_BYTE] = 1;
+            else
+            {
+                arr[BITS_IN_BYTE] = 1;
+            }
+            print_bulb(bit);
         }
-        } while (decimal > 0);
+        while (decimal > 0);
 
     }
 }
