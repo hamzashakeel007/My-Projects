@@ -12,15 +12,7 @@ int main(void)
     string message = get_string("Message: ");
     for (int i = 0; n = strlen(message); i < n; i++)
     {
-        if (isalpha(message[i]) && ispace(message[i]) && ispunct(message[i]))
-        {
-           message[i] = message[i] + n;
-        }
-
-        else
-        {
-            continue;
-        }
+        
     }
 
 }
