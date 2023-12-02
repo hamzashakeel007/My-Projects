@@ -16,7 +16,7 @@ int main(void)
         int decimal = message[i];
 
         //Converting into binary
-        
+        int arr[BITS_IN_BYTE];
     }
 }
 
