@@ -10,7 +10,7 @@ int main(void)
 {
     // TODO
     string message = get_string("Message: ");
-    for (int i = 0; int n = strlen(message); i < n; i++)
+    for (int i = 0, n = strlen(message); i < n; i++)
     {
         int decimal = message[i];
         printf("%i\n", decimal);
