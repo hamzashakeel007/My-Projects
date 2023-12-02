@@ -12,7 +12,7 @@ int main(void)
     string message = get_string("Message: ");
     for (int i = 0; i < strlen(message); i++)
     {
-        if (message[i] >= )
+        if (BITS_IN_BYTE[message[i]] >= )
         {
             countl++;
         }
