@@ -18,10 +18,10 @@ int main(void)
         //Converting into binary
         for (int j = 0; j < BITS_IN_BYTE; i++)
         {
-            int divide = decimal = decimal / 10;
-            binary[j] = binary[j] % 2;
+            int divide = decimal / 10;
+            binary[j] = divide[j] % 2;
 
-            if (divide % 2 == 0)
+            if (binary[j] % 2 == 0)
             {
                 print_bulb(bit);
             }
