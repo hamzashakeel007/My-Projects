@@ -10,11 +10,11 @@ int main(void)
 {
     // TODO
     string message = get_string("Message: ");
-    for (int i = 0; i < strlen(message); i++)
+    for (int i = 0; n = strlen(message); i < n; i++)
     {
-        if (message[i] >= 32 && message[i] <= 126)
+        if (isalpha(message[i]) && ispace(message[i]) && ispunct(message[i]))
         {
-           message = message + ;
+           message[i] = message[i] + n;
         }
 
         else
