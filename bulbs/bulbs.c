@@ -14,14 +14,14 @@ int main(void)
     {
         //Converting into decimal
         int decimal = message[i];
-        int binary[BITS_IN_BYTE];
+        int binary = 0;
         //Converting into binary
         for (int j = 0; j < BITS_IN_BYTE; i++)
         {
             int divide = decimal / 10;
-            binary[j] = divide[j] % 2;
+            binary = divide % 2;
 
-            if (binary[j] % 2 == 0)
+            if (binary == 0)
             {
                 print_bulb(bit);
             }
