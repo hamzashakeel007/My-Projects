@@ -17,7 +17,7 @@ int main(void)
         int decimal = message[i];
 
         //Converting into binary
-        do
+        for (int j = 0; j < BITS_IN_BYTE; i++)
         {
             int remainder = decimal = decimal / 10;
 
@@ -32,9 +32,7 @@ int main(void)
                 int bit = arr[BITS_IN_BYTE] = 1;
                 print_bulb(bit);
             }
-
         }
-        while (decimal > 0);
 
     }
 }
