@@ -19,7 +19,7 @@ int main(void)
         //Converting into binary
         do
         {
-            int divide = decimal = decimal / 10;
+            int remainder = decimal = decimal / 10;
 
             if (divide % 2 == 0)
             {
