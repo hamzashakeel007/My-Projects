@@ -12,6 +12,7 @@ int main(void)
     string message = get_string("Message: ");
     for (int i = 0; n = strlen(message); i < n; i++)
     {
+        int decimal = message[i];
         
     }
 
