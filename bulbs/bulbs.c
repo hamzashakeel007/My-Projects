@@ -12,10 +12,12 @@ int main(void)
     string message = get_string("Message: ");
     for (int i = 0, n = strlen(message); i < n; i++)
     {
+        //Converting into decimal
         int decimal = message[i];
-        printf("%i\n", decimal);
-    }
 
+        //Converting into binary
+        
+    }
 }
 
 void print_bulb(int bit)
