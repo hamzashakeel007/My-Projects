@@ -19,8 +19,8 @@ int main(void)
         //Converting into binary
         do
         {
-            int divide = decimal / 10;
-        } while (true)
+            int decimal = decimal / 10;
+        } while (decimal > 0)
         if (decimal % 2 == 0)
         {
             arr[BITS_IN_BYTE] = 0;
