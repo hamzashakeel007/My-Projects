@@ -14,7 +14,7 @@ int main(void)
     {
         //Converting into decimal
         int decimal = message[i];
-        int binary[BITS_IN_BYTE] = 0;
+        int binary[BITS_IN_BYTE];
         //Converting into binary
         for (int j = 0; j < BITS_IN_BYTE; i++)
         {
