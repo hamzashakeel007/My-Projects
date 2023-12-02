@@ -20,8 +20,16 @@ int main(void)
         {
             int divide = decimal / 10;
             bit = divide % 2;
-            print_bulb(bit);
 
+            if (bit == 0)
+            {
+                print_bulb(bit);
+            }
+
+            else
+            {
+                print_bulb(bit);
+            }
         }
     }
 }
