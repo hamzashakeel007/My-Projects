@@ -21,8 +21,7 @@ int main(void)
         {
             int divide = decimal = decimal / 10;
 
-        } while (decimal > 0);
-        if (decimal % 2 == 0)
+            if (divide % 2 == 0)
         {
             arr[BITS_IN_BYTE] = 0;
         }
@@ -31,6 +30,8 @@ int main(void)
         {
             arr[BITS_IN_BYTE] = 1;
         }
+        } while (decimal > 0);
+
     }
 }
 
