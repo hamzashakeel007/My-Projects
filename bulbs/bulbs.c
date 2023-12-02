@@ -9,7 +9,6 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    int arr[BITS_IN_BYTE];
     string message = get_string("Message: ");
     for (int i = 0, n = strlen(message); i < n; i++)
     {
@@ -19,7 +18,7 @@ int main(void)
         //Converting into binary
         for (int j = 0; j < BITS_IN_BYTE; i++)
         {
-            int remainder = decimal = decimal / 10;
+            int quotient = decimal = decimal / 10;
 
             if (divide % 2 == 0)
             {
@@ -33,7 +32,6 @@ int main(void)
                 print_bulb(bit);
             }
         }
-
     }
 }
 
