@@ -14,7 +14,7 @@ int main(void)
     {
         if (message[i] >= 32 && message[i] <= 126)
         {
-            
+           message = message + ;
         }
 
         else
