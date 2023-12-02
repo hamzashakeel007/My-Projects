@@ -13,7 +13,7 @@ int main(void)
     for (int i = 0; n = strlen(message); i < n; i++)
     {
         int decimal = message[i];
-        
+        printf("%i\n", decimal);
     }
 
 }
