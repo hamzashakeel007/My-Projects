@@ -19,17 +19,19 @@ int main(void)
         for (int j = 0; j < BITS_IN_BYTE; i++)
         {
             int divide = decimal / 10;
+
             bit = divide % 2;
+            printf("%i\n", divide);
 
-            if (bit == 0)
-            {
-                print_bulb(bit);
-            }
+            // if (bit == 0)
+            // {
+            //     print_bulb(bit);
+            // }
 
-            else
-            {
-                print_bulb(bit);
-            }
+            // else
+            // {
+            //     print_bulb(bit);
+            // }
         }
     }
 }
