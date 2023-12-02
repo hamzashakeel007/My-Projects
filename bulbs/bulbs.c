@@ -17,7 +17,10 @@ int main(void)
         int decimal = message[i];
 
         //Converting into binary
-        for (int j = 0; j < decimal[i])
+        do
+        {
+            int divide = decimal / 10;
+        } while (true)
         if (decimal % 2 == 0)
         {
             arr[BITS_IN_BYTE] = 0;
