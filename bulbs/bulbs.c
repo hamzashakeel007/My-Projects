@@ -9,7 +9,7 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    string text = get_string("Message: ");
+    string message = get_string("Message: ");
 
 }
 
