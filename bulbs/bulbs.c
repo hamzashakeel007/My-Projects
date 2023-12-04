@@ -15,19 +15,20 @@ int main(void)
         //Converting into decimal
         int decimal = message[i];
         int bit = 0;
+        int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
         //Converting into binary
-        for (int j = 0; j < BITS_IN_BYTE; j++)
+        for (int j = 0; decimal > 0; j++)
         {
-            int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
-            bit = decimal % 2;
-            decimal = decimal / 10;
-            binary[j] = bit;
 
-            for (int k = 7; k < BITS_IN_BYTE - 1; k--)
-            {
-                print_bulb(bit);
-            }
+            binary[j] = decimal % 2;
+            decimal = decimal / 2;
         }
+
+        for (int k = BITS_IN_BYTE; k > -1; k--)
+        {
+            print_bulb(binary[k]);
+        }
+        printf("\n");
     }
 }
 
