@@ -2,7 +2,7 @@ sort1 uses: TODO
 Bubble Sort
 How do you know?: TODO
 Sort1 uses bubble sort due to the fact that it takes comparatively less time than sort3 on all of the given sorted .txt files.
-This indicates that in best case scenario bubble sort only needs to take O(n) steps to execute the program.
+This indicates that in best case scenario bubble sort only needs to take Ω(n) steps to execute the program.
 
 sort2 uses: TODO
 Merge Sort
