@@ -14,7 +14,7 @@ int main(void)
     {
         //Converting into decimal
         int decimal = message[i];
-        
+
         //Converting into binary
         int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
         for (int j = 0; decimal > 0; j++)
@@ -24,7 +24,7 @@ int main(void)
             decimal = decimal / 2;
         }
 
-        for (int k = BITS_IN_BYTE; k > -1; k--)
+        for (int k = BITS_IN_BYTE - 1; k >= 0; k--)
         {
             print_bulb(binary[k]);
         }
