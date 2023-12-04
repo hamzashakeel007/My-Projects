@@ -18,20 +18,19 @@ int main(void)
         //Converting into binary
         for (int j = 0; j < BITS_IN_BYTE; i++)
         {
-            int divide = decimal / 10;
+            int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
+            bit = decimal % 2;
+            decimal = decimal / 10;
 
-            bit = divide % 2;
-            printf("%i\n", divide);
+            for (int j = 0; j < 8; j++)
+            {
+                binary[i] = bit[i];
+            }
 
-            // if (bit == 0)
-            // {
-            //     print_bulb(bit);
-            // }
-
-            // else
-            // {
-            //     print_bulb(bit);
-            // }
+            for (int k = 7; k < BITS_IN_BYTE - 1; k--)
+            {
+                printf("%i\n", binary[i]);
+            }
         }
     }
 }
