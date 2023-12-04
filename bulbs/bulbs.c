@@ -21,15 +21,11 @@ int main(void)
             int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
             bit = decimal % 2;
             decimal = decimal / 10;
-
-            for (int j = 0; j < 8; j++)
-            {
-                binary[j] = bit[i];
-            }
+            binary[j] = bit;
 
             for (int k = 7; k < BITS_IN_BYTE - 1; k--)
             {
-                printf("%i\n", binary[i]);
+                print_bulb(bit);
             }
         }
     }
