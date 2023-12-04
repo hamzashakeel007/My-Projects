@@ -16,7 +16,7 @@ int main(void)
         int decimal = message[i];
         int bit = 0;
         //Converting into binary
-        for (int j = 0; j < BITS_IN_BYTE; i++)
+        for (int j = 0; j < BITS_IN_BYTE; j++)
         {
             int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
             bit = decimal % 2;
@@ -24,7 +24,7 @@ int main(void)
 
             for (int j = 0; j < 8; j++)
             {
-                binary[i] = bit[i];
+                binary[j] = bit[i];
             }
 
             for (int k = 7; k < BITS_IN_BYTE - 1; k--)
