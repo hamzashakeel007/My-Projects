@@ -24,7 +24,7 @@ int main(void)
             decimal = decimal / 2;
         }
 
-        for (int k = BITS_IN_BYTE - 1; k >= 0; k--)
+        for (int k = BITS_IN_BYTE - 1; k > - 1; k--)
         {
             print_bulb(binary[k]);
         }
