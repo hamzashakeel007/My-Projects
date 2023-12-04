@@ -1,15 +1,18 @@
-sort1 uses: TODO
+sort1 uses: TODO Bubble Sort
+
 Bubble Sort
-How do you know?: TODO
+How do you know?: TODO Sort1 uses bubble sort due to the fact that it takes comparatively less time than sort3 on all of the given sorted .txt files.
+This indicates that in best case scenario bubble sort only needs to take Ω(n) steps to execute the program.
+
 Sort1 uses bubble sort due to the fact that it takes comparatively less time than sort3 on all of the given sorted .txt files.
 This indicates that in best case scenario bubble sort only needs to take Ω(n) steps to execute the program.
 
-sort2 uses: TODO
+sort2 uses: TODO Merge Sort
+
 Merge Sort
-How do you know?: TODO
+How do you know?: TODO Sort2 uses merge sort due to the fact that it utilizes significantly less time as compared to sort1 and sort3 on all of the given .txt files.
+
 Sort2 uses merge sort due to the fact that it utilizes significantly less time as compared to sort1 and sort3 on all of the given .txt files.
 
-sort3 uses: TODO
-Selection Sort
-How do you know?: TODO
-Sort3 uses selection sort due to the fact that it takes comparatively less time than sort1 on most of the given .txt files.
+sort3 uses: Selection Sort
+How do you know?: Sort3 uses selection sort due to the fact that it takes comparatively less time than sort1 on most of the given .txt files.
