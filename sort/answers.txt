@@ -1,7 +1,7 @@
 sort1 uses: TODO
 Bubble Sort
 How do you know?: TODO
-
+Sort3 uses bubble sort due to the fact that it takes comparatively less time than sort1 on most of the given .txt files.
 
 sort2 uses: TODO
 Merge Sort
