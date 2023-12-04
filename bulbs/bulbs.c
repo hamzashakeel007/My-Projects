@@ -14,8 +14,9 @@ int main(void)
     {
         //Converting into decimal
         int decimal = message[i];
-        int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
+        
         //Converting into binary
+        int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
         for (int j = 0; decimal > 0; j++)
         {
 
