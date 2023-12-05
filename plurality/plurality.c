@@ -90,7 +90,7 @@ void print_winner(void)
             max_votes = candidates[i].votes;
         }
     }
-
+    // Printing the winners
     for (int j = 0; j < candidate_count; j++)
     {
         if (candidates[j].votes == max_votes)
