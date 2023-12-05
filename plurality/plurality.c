@@ -66,6 +66,14 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(cadidates[i].name, name))
+        {
+            candidates[i].vote++;
+            return true;
+        }
+    }
     return false;
 }
 
