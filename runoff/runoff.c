@@ -129,7 +129,7 @@ bool vote(int voter, int rank, string name)
     // TODO
     int v[], r[];
     string n[];
-    for (int i = 0; i < ; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         v[] = voter;
         r[] = rank;
