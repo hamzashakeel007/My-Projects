@@ -210,7 +210,7 @@ void eliminate(int min)
         {
             if (candidates[i].votes == min)
             {
-                printf("%s \n", candidates[i].name);
+                candidates[i].eliminated = true;
             }
         }
     return;
