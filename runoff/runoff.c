@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if(strcmp(name, candidates[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
         {
             preferences[voter][rank] = i;
             return true;
@@ -162,13 +162,13 @@ bool print_winner(void)
 {
     // TODO
     for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes > voter_count / 2)
         {
-            if (candidates[i].votes > voter_count / 2)
-            {
-                printf("%s \n", candidates[i].name);
-                return true;
-            }
+            printf("%s \n", candidates[i].name);
+            return true;
         }
+    }
     return false;
 }
 
@@ -178,12 +178,12 @@ int find_min(void)
     // TODO
     int min = voter_count;
     for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes < min && candidates[i].eliminated == 0)
         {
-            if (candidates[i].votes < min && candidates[i].eliminated == 0)
-            {
-                min = candidates[i].votes;
-            }
+            min = candidates[i].votes;
         }
+    }
     return min;
 }
 
@@ -192,13 +192,13 @@ bool is_tie(int min)
 {
     // TODO
     for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
         {
-            if (candidates[i].votes == min)
-            {
-                // printf("%s \n", candidates[i].name);
-                return true;
-            }
+            // printf("%s \n", candidates[i].name);
+            return true;
         }
+    }
     return false;
 }
 
@@ -207,11 +207,11 @@ void eliminate(int min)
 {
     // TODO
     for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
         {
-            if (candidates[i].votes == min)
-            {
-                candidates[i].eliminated = true;
-            }
+            candidates[i].eliminated = true;
         }
+    }
     return;
 }
