@@ -128,8 +128,6 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    int v[], r[];
-    string n[];
     for (int i = 0; i < candidate_count; i++)
     {
         if(strcmp(name, candidates[i].name) == 0)
@@ -149,7 +147,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (preferences[i][j].eliminated == 0)
+            if (preferences[i][j].eliminated == false)
             {
                 preferences[i][j].votes++;
                 break;
