@@ -127,7 +127,12 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    
+    for (int i = 0; i < ; i++)
+    {
+        v[] = voter;
+        r[] = rank;
+    n[] = name;
+    }
     return false;
 }
 
