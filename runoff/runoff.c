@@ -178,6 +178,15 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    int minimum;
+    for (int i = 0; i < candidate_count; i++)
+        {
+            if (candidates.votes > voter_count / 2)
+            {
+                printf("%s \n", candidates[i].name);
+                return true;
+            }
+        }
     return 0;
 }
 
