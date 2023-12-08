@@ -208,6 +208,13 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-
+    for (int i = 0; i < candidate_count; i++)
+        {
+            if (candidates[i].vote == min)
+            {
+                printf("%s \n", candidates[i].name);
+                return true;
+            }
+        }
     return;
 }
