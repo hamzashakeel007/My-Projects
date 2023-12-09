@@ -9,13 +9,18 @@ int main(int argc, char *argv[])
         return;
     }
 
-    FILE *file = fopen(argv[1], "r");
+    FILE *infile = fopen(argv[1], "r");
 
-    if (file == NULL)
+    if (infile == NULL)
     {
         printf("File not opened due do insufficient memory\n");
         return;
     }
 
-    
+    char *buffer[512];
+    int count;
+
+    FILE *outfile = NULL;
+
+    char *filename = malloc(8 * sizeof(char));
 }
