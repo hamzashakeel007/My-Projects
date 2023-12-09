@@ -16,4 +16,6 @@ int main(int argc, char *argv[])
         printf("File not opened due do insufficient memory\n");
         return;
     }
+
+    
 }
