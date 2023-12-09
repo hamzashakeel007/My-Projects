@@ -23,4 +23,9 @@ int main(int argc, char *argv[])
     FILE *outfile = NULL;
 
     char *filename = malloc(8 * sizeof(char));
+
+    while (fread(buffer, sizeof(char), 512, infile))
+    {
+        
+    }
 }
