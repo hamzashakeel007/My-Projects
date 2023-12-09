@@ -14,10 +14,10 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 
             // Averaging for gray filter
             int grayfilter = green + red + blue / 3.0;
-            int round = round(grayfilter);
-            image[i][j].rgbtGreen = round;
-            image[i][j].rgbtRed = round;
-            image[i][j].rgbtGreen = round;
+            int gf = round(grayfilter);
+            image[i][j].rgbtGreen = gf;
+            image[i][j].rgbtRed = gf;
+            image[i][j].rgbtGreen = gf;
         }
     }
     return;
