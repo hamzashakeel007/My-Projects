@@ -72,7 +72,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width / 2; j++)
         {
-             swap = image[i][j];
+            swap = image[i][j];
             image[i][j] = image[i][width - (j + 1)];
             image[i][width - (j + 1)] = swap;
         }
@@ -83,5 +83,22 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE temp;
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width / 2; j++)
+        {
+            temp[i] = image[i][j];
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width / 2; j++)
+        {
+            temp[i] = image[i][j];
+        }
+    }
+
     return;
 }
