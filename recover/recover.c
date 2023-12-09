@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
     char *filename = malloc(8 * sizeof(char));
 
-    while (fread(buffer, sizeof(char), 512, infile) == BLOCK_SIZE)
+    while (fread(buffer, sizeof(char), 512, infile) == 512)
     {
 
 
