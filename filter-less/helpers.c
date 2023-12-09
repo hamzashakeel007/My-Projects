@@ -40,7 +40,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sepiaGreen = round(.349 * originalRed + .686 * originalGreen + .168 * originalBlue);
             int sepiaBlue = round(.272 * originalRed + .534 * originalGreen + .131 * originalBlue);
 
-            if (sepiaRed > 255 )
+            if (sepiaRed > 255)
             {
                 sepiaRed = 255;
             }
@@ -83,22 +83,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE temp;
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width / 2; j++)
+        for (int j = 0; j < width; j++)
         {
-            temp = image[i][j];
+            RGBTRIPLE temp = image[i][j];
         }
     }
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width / 2; j++)
-        {
-            temp = image[i][j];
-        }
-    }
-
     return;
 }
