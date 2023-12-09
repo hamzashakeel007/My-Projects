@@ -11,4 +11,9 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(argv[1], "r");
 
+    if (file == NULL)
+    {
+        printf("File not opened due do insufficient memory\n");
+        return;
+    }
 }
