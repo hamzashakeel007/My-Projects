@@ -8,12 +8,13 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if (image[i][j].rgbtGreen == 0x00 && image[i][j].rgbtBlue == 0x00 && image[i][j].rgbtRed == 0x00)
-            {
-                image[i][j].rgbtGreen = 0x04;
-                image[i][j].rgbtBlue = 0x0a;
-                image[i][j].rgbtRed = 0xf4;
-            }
+            float green = image[i][j].rgbtGreen;
+            float red = image[i][j].rgbtred;
+            float blue = image[i][j].rgbtblue;
+
+            // Averaging for gray filter
+            float grayfilter = green + red + blue / 3.0;
+            int round = round(grayfilter);
         }
     }
     return;
