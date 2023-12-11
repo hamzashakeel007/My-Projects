@@ -19,22 +19,26 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char *buffer[512];
-    int count;
-
+    unsigned char buffer[512];
     FILE *outfile = NULL;
-
     char *filename = malloc(8 * sizeof(char));
+    int count = 0;
 
     while (fread(buffer, sizeof(char), 512, infile) == 512)
     {
-    }
-    free(filename);
-    fclose(outfile);
-    fclose(infile);
-    // while (fread(buffer, sizeof(char), 512, infile))
-    // {
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            sprintf(filename, "%03i.jpg", count);
+            outfile = fopen(filename, "w");
+            count++;
+        }
 
-    // }
+        if (outfile != NULL)
+        {
+            fwrite(buffer, sizeof(char), 512, outfile);
+        }
+    }
+
+
     return 0;
 }
