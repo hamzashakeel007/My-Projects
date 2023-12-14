@@ -2,10 +2,10 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -28,7 +28,7 @@ unsigned int hash_val;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    //TODO
+    // TODO
 
     return true;
 }
@@ -63,12 +63,11 @@ bool load(const char *dictionary)
             return false;
         }
 
-        strcpy (new->word, word);
+        strcpy(new->word, word);
         hash_val = hash(word);
         new->next = table[hash_val];
         table[hash_val] = new;
         word_count++;
-
     }
     fclose(file);
     return true;
