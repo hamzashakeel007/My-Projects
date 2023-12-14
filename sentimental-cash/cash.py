@@ -32,7 +32,7 @@ def main():
 def get_cents():
     n = -1
     while n < 0:
-        n = cs50.get_int("Change owed: ")
+        n = cs50.get_float("Change owed: ")
     return n
 
 
