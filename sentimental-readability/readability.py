@@ -18,13 +18,13 @@ def main():
     elif index >= 16:
         print("Grade 16+")
     else:
-        printf("Grade ", int (round(index)))
+        print("Grade ", int (round(index)))
 
 
 def count_letters(text):
     countl = 0
     for i in range(0, len(text), 1):
-        if text.isalpha() == 0:
+        if text[i].isalpha():
             countl += 1
         else:
             continue
@@ -33,7 +33,7 @@ def count_letters(text):
 def count_words(text):
     countw = 0
     for i in range(0, len(text), 1):
-        if text.isspace() == 0:
+        if text[i].isspace():
             countw += 1
         else:
             continue
