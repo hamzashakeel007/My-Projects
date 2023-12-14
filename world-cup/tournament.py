@@ -22,7 +22,7 @@ def main():
         reader = csv.DictReader(file)
         for team in reader:
             team["rating"] = int(team["rating"])
-            
+            teams.append(team)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -57,6 +57,7 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
+    
 
 
 if __name__ == "__main__":
