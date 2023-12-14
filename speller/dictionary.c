@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
+#include <strings.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -28,6 +29,18 @@ unsigned int hash_val;
 bool check(const char *word)
 {
     // TODO
+    hash_val = hash(word);
+    node *traverse = table[hash_val];
+
+    while( traverse != 0)
+    {
+        if (strcasecmp(word, traverse->word) == 0)
+        {
+            return true;
+        }
+        traverse = traverse->next;
+    }
+
     return false;
 }
 
