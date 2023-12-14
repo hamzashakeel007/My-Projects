@@ -28,18 +28,15 @@ def main():
     # Print total number of coins to give the customer
     print(coins)
 
+
 def get_cents():
-    # TODO
-    n = 0
-    do
-    {
-        n = cs50.get_int("Change owed: ");
-    }
-    while (n < 0);
+    n = -1
+    while n < 0:
+        n = cs50.get_int("Change owed: ")
     return n
 
+
 def calculate_quarters(cents):
-    # TODO
     quarters = 0
 
     while cents >= 25:
@@ -49,7 +46,6 @@ def calculate_quarters(cents):
 
 
 def calculate_dimes(cents):
-    # TODO
     dimes = 0
 
     while cents >= 10:
@@ -57,8 +53,8 @@ def calculate_dimes(cents):
         dimes += 1
     return dimes
 
+
 def calculate_nickels(cents):
-    # TODO
     nickels = 0
 
     while cents >= 5:
@@ -66,13 +62,14 @@ def calculate_nickels(cents):
         nickels += 1
     return nickels
 
+
 def calculate_pennies(cents):
-    # TODO
     pennies = 0
 
     while cents >= 1:
         cents = cents - 1
         pennies += 1
     return pennies
+
 
 main()
