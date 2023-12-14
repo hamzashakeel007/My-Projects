@@ -1,22 +1,21 @@
 # TODO
-#include <cs50.h>
+import cs50
 #include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
-{
-    string text = get_string("Text: ");
+def main():
+    text = cs50.get_string("Text: ")
 
-    int letters = count_letters(text);
-    int words = count_words(text);
-    int sentences = count_sentences(text);
+    letters = count_letters(text)
+    words = count_words(text)
+    sentences = count_sentences(text)
 
-    // Coleman-Liau Index formula
-    float L = (float) letters / words * 100;
-    float S = (float) sentences / words * 100;
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    #Coleman-Liau Index formula
+    float L = (float) letters / words * 100
+    float S = (float) sentences / words * 100
+    float index = 0.0588 * L - 0.296 * S - 15.8
 
     if (index < 1)
     {
