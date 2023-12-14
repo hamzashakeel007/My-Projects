@@ -49,12 +49,12 @@ bool load(const char *dictionary)
     {
         Node *new = malloc(sizeof(node));
 
-        if (n == NULL)
+        if (new == NULL)
         {
             return false;
         }
 
-        strcpy (n->word, word);
+        strcpy (new->word, word);
     }
 }
 
