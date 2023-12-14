@@ -7,14 +7,10 @@ import cs50
 
 def main():
     text = cs50.get_string("Text: ")
-
-    letters = count_letters(text)
-    words = count_words(text)
-    sentences = count_sentences(text)
-
+    
     #Coleman-Liau Index formula
-    L = float (letters / words * 100)
-    S = float (sentences / words * 100)
+    L = float (count_letters(text) / count_words(text) * 100)
+    S = float (count_sentences(text) / count_words(text) * 100)
     index = 0.0588 * L - 0.296 * S - 15.8
 
     if index < 1:
