@@ -1,12 +1,12 @@
 # TODO
 import cs50
 
-def main()
+def main():
     pyramid()
 
 
 
-def pyramid()
+def pyramid():
 
     # Pyramid height input
     height = 0
@@ -15,7 +15,7 @@ def pyramid()
         height = cs50.get_int("Enter height for mario's pyramid: \n")
 
     for i in height ++i:
-        for j in height+i+3; ++j:
+        for j in height+i+3 ++j:
             if (j == height) or (j == height+1) or (i+j < height-1):
                 print(" ")
             else:
