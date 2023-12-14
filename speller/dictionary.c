@@ -50,7 +50,7 @@ bool load(const char *dictionary)
     }
 
     char word[LENGTH + 1];
-    
+
     // read file till the end
     while (fscanf(file, "%s", word) != EOF)
     {
@@ -62,6 +62,7 @@ bool load(const char *dictionary)
         }
 
         strcpy (new->word, word);
+        hash_val = hash(word);
     }
     fclose(file);
     return true;
