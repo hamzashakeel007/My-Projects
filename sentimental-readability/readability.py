@@ -17,74 +17,41 @@ def main():
     float S = (float) sentences / words * 100
     float index = 0.0588 * L - 0.296 * S - 15.8
 
-    if (index < 1)
-    {
-        printf("Before Grade 1\n");
-    }
+    if index < 1:
+        print("Before Grade 1")
+    elif index >= 16:
+        print("Grade 16+")
+    else:
+        printf("Grade ", (int) round(index))
 
-    else if (index >= 16)
-    {
-        printf("Grade 16+\n");
-    }
 
-    else
-    {
-        printf("Grade %i\n", (int) round(index));
-    }
-}
-
-int count_letters(string text)
-{
+def count_letters(text):
     int countl = 0;
-    for (int i = 0; i < strlen(text); i++)
-    {
-        if (isalpha(text[i]))
-        {
-            countl++;
-        }
+    for i in range(0, i < strlen(text), 1):
+        if (isalpha(text[i])):
+            countl += 1
+        else:
+            continue
+    return countl
 
-        else
-        {
-            continue;
-        }
-    }
+def count_words(text):
+    countw = 0
+    for i in range(0, i < strlen(text), 1):
+        if (isspace(text[i])):
+            countw += 1
+        else:
+            continue
+    return countw + 1
 
-    return countl;
-}
 
-int count_words(string text)
-{
-    int countw = 0;
-    for (int i = 0; i < strlen(text); i++)
-    {
-        if (isspace(text[i]))
-        {
-            countw++;
-        }
+def count_sentences(text):
+    counts = 0
+    for i in range(0, i < strlen(text), 1):
+        if (text[i] == '.' or text[i] == '?' or text[i] == '!'):
+            counts += 1
+        else:
+            continue
+    return counts
 
-        else
-        {
-            continue;
-        }
-    }
 
-    return countw + 1;
-}
-
-int count_sentences(string text)
-{
-    int counts = 0;
-    for (int i = 0; i < strlen(text); i++)
-    {
-        if (text[i] == '.' || text[i] == '?' || text[i] == '!')
-        {
-            counts++;
-        }
-
-        else
-        {
-            continue;
-        }
-    }
-    return counts;
-}
+main()
