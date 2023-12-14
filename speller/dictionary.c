@@ -4,7 +4,8 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
+
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -19,6 +20,9 @@ const unsigned int N = 26;
 
 // Hash table
 node *table[N];
+
+unsigned int word_count;
+unsigned int hash_val;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -47,7 +51,7 @@ bool load(const char *dictionary)
 
     char word[LENGTH + 1];
 
-    while (fscanf(file, %s, word) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
         node *new = malloc(sizeof(node));
 
