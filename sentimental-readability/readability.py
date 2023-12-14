@@ -7,7 +7,7 @@ import cs50
 
 def main():
     text = cs50.get_string("Text: ")
-    
+
     #Coleman-Liau Index formula
     L = float (count_letters(text) / count_words(text) * 100)
     S = float (count_sentences(text) / count_words(text) * 100)
@@ -24,7 +24,7 @@ def main():
 def count_letters(text):
     countl = 0
     for i in range(0, len(text), 1):
-        if i.isalpha() == 0:
+        if text.isalpha() == 0:
             countl += 1
         else:
             continue
@@ -33,7 +33,7 @@ def count_letters(text):
 def count_words(text):
     countw = 0
     for i in range(0, len(text), 1):
-        if i.isspace() == 0:
+        if text.isspace() == 0:
             countw += 1
         else:
             continue
