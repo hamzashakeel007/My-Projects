@@ -107,6 +107,19 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-
+    for (int i = 0; i < N; i++)
+    {
+        node *traverse = table[i];
+        while (traverse)
+        {
+            node *tmp = traverse;
+            traverse = traverse->next;
+            free(tmp);
+        }
+        if (traverse == NULL)
+        {
+            return true;
+        }
+    }
     return false;
 }
