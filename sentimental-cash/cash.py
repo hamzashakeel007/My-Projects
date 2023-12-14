@@ -33,7 +33,7 @@ def get_cents():
     n = 0
     do
     {
-        n = get_int("Change owed: ");
+        n = cs50.get_int("Change owed: ");
     }
     while (n < 0);
     return n
