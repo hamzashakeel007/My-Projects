@@ -63,6 +63,10 @@ bool load(const char *dictionary)
 
         strcpy (new->word, word);
         hash_val = hash(word);
+        new->next = table[hash_val];
+        table[hash_val] = new;
+        word_count++;
+
     }
     fclose(file);
     return true;
