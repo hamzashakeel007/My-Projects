@@ -49,12 +49,12 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     unsigned long upper = 0;
-    // int length = strlen(word);
-    for (int i = 0; i < strlen(word); i++)
+    int length = strlen(word);
+    for (int i = 0; i < length; i++)
     {
-        upper += tolower(word[i]);
+        upper += toupper(word[i]);
     }
-
+    
     return upper % N;
 }
 
