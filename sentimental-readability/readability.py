@@ -28,7 +28,7 @@ def main():
 def count_letters(text):
     countl = 0
     for i in range(0, len(text), 1):
-        if i.isalpha():
+        if i.isalpha() == True:
             countl += 1
         else:
             continue
@@ -37,7 +37,7 @@ def count_letters(text):
 def count_words(text):
     countw = 0
     for i in range(0, len(text), 1):
-        if i.isspace():
+        if i.isspace() == True:
             countw += 1
         else:
             continue
