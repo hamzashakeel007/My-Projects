@@ -37,7 +37,7 @@ def count_letters(text):
 def count_words(text):
     countw = 0
     for i in range(0, len(text), 1):
-        if (isspace(text[i])):
+        if i.isspace():
             countw += 1
         else:
             continue
