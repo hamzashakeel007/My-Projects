@@ -48,7 +48,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0] - 'Á');
+    return toupper(word[0]) - 'A';
     // unsigned long upper = 0;
     // int length = strlen(word);
     // for (int i = 0; i < length; i++)
