@@ -33,6 +33,7 @@ def get_cents():
     n = -1
     while n < 0:
         n = cs50.get_float("Change owed: ")
+    n = round(n*100)
     return n
 
 
