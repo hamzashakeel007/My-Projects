@@ -36,8 +36,26 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    
-    return false;
+    FILE *file = fopen(dictionary, "r");
+
+    if (file == NULL)
+    {
+        return false;
+    }
+
+    char word[LENGTH + 1];
+
+    while (fscanf(file, %s, word) != EOF)
+    {
+        Node *new = malloc(sizeof(node));
+
+        if (n == NULL)
+        {
+            return false;
+        }
+
+        strcpy (n->word, word);
+    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
