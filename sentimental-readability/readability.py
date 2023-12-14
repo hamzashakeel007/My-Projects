@@ -13,21 +13,21 @@ def main():
     sentences = count_sentences(text)
 
     #Coleman-Liau Index formula
-    float L = (float) letters / words * 100
-    float S = (float) sentences / words * 100
-    float index = 0.0588 * L - 0.296 * S - 15.8
+    L = float (letters / words * 100)
+    S = float (sentences / words * 100)
+    index = 0.0588 * L - 0.296 * S - 15.8
 
     if index < 1:
         print("Before Grade 1")
     elif index >= 16:
         print("Grade 16+")
     else:
-        printf("Grade ", (int) round(index))
+        printf("Grade ", int (round(index)))
 
 
 def count_letters(text):
-    int countl = 0
-    for i in range(0, i < strlen(text), 1):
+    countl = 0
+    for i in range(0, len(text), 1):
         if (isalpha(text[i])):
             countl += 1
         else:
@@ -36,7 +36,7 @@ def count_letters(text):
 
 def count_words(text):
     countw = 0
-    for i in range(0, i < strlen(text), 1):
+    for i in range(0, len(text), 1):
         if (isspace(text[i])):
             countw += 1
         else:
@@ -46,7 +46,7 @@ def count_words(text):
 
 def count_sentences(text):
     counts = 0
-    for i in range(0, i < strlen(text), 1):
+    for i in range(0, len(text), 1):
         if (text[i] == '.' or text[i] == '?' or text[i] == '!'):
             counts += 1
         else:
