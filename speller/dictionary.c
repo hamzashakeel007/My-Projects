@@ -28,18 +28,7 @@ unsigned int hash_val;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-    // hash_val = hash(word);
-    // node *traverse = table[hash_val];
-
-    // while( traverse != 0)
-    // {
-    //     if (strcasecmp(word, traverse->word) == 0)
-    //     {
-    //         return true;
-    //     }
-    //     traverse = traverse->next;
-    // }
+    //TODO
 
     return true;
 }
