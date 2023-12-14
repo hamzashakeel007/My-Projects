@@ -20,7 +20,7 @@ def pyramid():
                 print(" ", end="")
             else:
                 print("#", end="")
-        print("\n");
+        print()
 
 
 main()
