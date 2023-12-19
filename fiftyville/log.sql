@@ -38,3 +38,4 @@ ORDER BY hour ASC LIMIT 1;
 SELECT name, phone_number, license_plate, destination_airport_id FROM flights, people, passengers
 WHERE people.passport_number = passengers.passport_number AND flights.id = passengers.flight_id AND flights.id = 36
 ORDER BY flights.hour ASC;
+-- Final suspects Doris, Sofia, Bruce, Edward, Kelsey, Taylor, Kenny, Luna
