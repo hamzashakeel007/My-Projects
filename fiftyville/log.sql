@@ -42,4 +42,5 @@ ORDER BY flights.hour ASC;
 
 SELECT name FROM people, passengers, flights
 WHERE (people.passport_number = passengers.passport_number AND flights.id = passengers.flight_id AND flights.id = 36)
-AND name IN ()
+AND name IN (SELECT caller_name, FROM phone_calls WHERE month = 7 AND day = 28 AND duration <60)
+AND
