@@ -36,5 +36,5 @@ ORDER BY hour ASC LIMIT 1;
 -- Origin airport: Fiftyville and Destination airport: New York City | id: 36
 
 SELECT name, phone_number, license_plate, destination_airport_id FROM flights, people, passengers
-WHERE peoople.passsport_number = passengers.passsport_number AND flights.id = passengers.flights_id AND flights.id = 36
+WHERE people.passsport_number = passengers.passsport_number AND flights.id = passengers.flights_id AND flights.id = 36
 ORDER BY flights.hour ASC;
