@@ -17,5 +17,5 @@ AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street';
 --Suspects According to witness #2: Bruce, Brooke, Diana, Kenny, Iman, Luca, Taylor, Benista
 
 -- According to witness #2 (Eugene)
-SELECT caller, receiver FROM phone_calls
+SELECT caller, receiver FROM phone_calls WHERE month = 7 AND day = 28 AND duration <60;
 
