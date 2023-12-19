@@ -40,4 +40,4 @@ WHERE people.passport_number = passengers.passport_number AND flights.id = passe
 ORDER BY flights.hour ASC;
 -- Final suspects Doris, Sofia, Bruce, Edward, Kelsey, Taylor, Kenny, Luna
 
-SELECT name FROM people 
+SELECT name FROM people, passengers, flights
