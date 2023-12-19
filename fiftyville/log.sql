@@ -33,5 +33,8 @@ SELECT caller_name, receiver_name,caller, receiver FROM phone_calls WHERE month 
 SELECT flights.id, hour, minute, origin_airport_id, destination_airport_id, city FROM flights, airports WHERE
 destination_airport_id = airports.id AND month = 7 AND day = 29
 ORDER BY hour ASC LIMIT 1;
--- Origin airport: Fiftyville and Destination airport: New York City
+-- Origin airport: Fiftyville and Destination airport: New York City | id: 36
 
+SELECT name, phone_number, license_plate, destination_airport_id FROM flights, people, passengers
+WHERE peoople.passsport_number = passengers.passsport_number AND flights.id = passengers.flights_id AND flights.id = 36
+ORDER BY flights.hour ASC;
