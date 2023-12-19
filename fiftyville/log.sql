@@ -3,3 +3,4 @@ SELECT description FROM crime_scene_reports WHERE month = 7 AND day = 28 AND str
 -- according to crime scene report description we know to look for witnesses' transcripts from interviews
 SELECT transcript FROM interviews WHERE month = 7 AND day = 28 AND transcript LIKE '%bakery%';
 
+SELECT
