@@ -4,4 +4,5 @@ SELECT description FROM crime_scene_reports WHERE month = 7 AND day = 28 AND str
 SELECT name, transcript FROM interviews WHERE month = 7 AND day = 28 AND transcript LIKE '%bakery%';
 -- According to witness #1 (Ruth)   Eugene Raymond
 SELECT activity, license_plate, name FROM people, bakery_security_logs WHERE people.license_plate = bakery_security_logs.license_plate
-AND 
+AND bakery_security_logs.month = 7 AND bakery_security_logs.day = 28 AND bakery_security_logs.hour = 10
+AND bakery_security_logs.minute
