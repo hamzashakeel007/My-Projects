@@ -19,8 +19,10 @@ AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street';
 -- According to witness #2 (Eugene)
 SELECT caller_name, receiver_name,caller, receiver FROM phone_calls WHERE month = 7 AND day = 28 AND duration <60;
 
-ALTER TABLE phone_calls ADD caller_name varchar(255);
-ALTER TABLE phone_calls ADD receiver_name varchar(255);
+ALTER TABLE phone_calls ADD caller_name;
+ALTER TABLE phone_calls ADD receiver_name;
 
 UPDATE phone_calls SET caller_name = people.name FROM people WHERE phone_calls.caller = people.phone_number;
 UPDATE phone_calls SET receiver_name = people.name FROM people WHERE phone_calls.receiver = people.phone_number;
+
+SELECT caller_name, receiver_name,caller, receiver FROM phone_calls WHERE month = 7 AND day = 28 AND duration <60;
