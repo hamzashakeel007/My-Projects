@@ -30,6 +30,7 @@ SELECT caller_name, receiver_name,caller, receiver FROM phone_calls WHERE month 
 -- Taylor (James), Diana (Philip), Carina (Jacqueline), Kenny (Doris), Benista (Anna)
 
 -- Checking the earliest flight the day after the robbery
-SELECT flights.id, hour, minute, origin_airport_id, destination_airport_id, city FROM flights, airports WHERE  month = 7 AND day = 29
+SELECT flights.id, hour, minute, origin_airport_id, destination_airport_id, city FROM flights, airports WHERE
+origin_airport_id = airports.id AND origin_airport_id= airports.id AND month = 7 AND day = 29
 ORDER BY hour ASC LIMIT 1;
 
