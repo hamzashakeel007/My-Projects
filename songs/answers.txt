@@ -1,0 +1,3 @@
+Audio Aura of a user can be measured/calculated by first figuring out the genre of the songs the user often listens to and rates to
+then based on his top certain frequent songs we can combine those genres and based on the genres combined, an emotion(s) can be
+linked to that specific combination of genre and can be presented in visuals to the user.
