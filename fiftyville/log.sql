@@ -26,4 +26,6 @@ UPDATE phone_calls SET caller_name = people.name FROM people WHERE phone_calls.c
 UPDATE phone_calls SET receiver_name = people.name FROM people WHERE phone_calls.receiver = people.phone_number;
 
 SELECT caller_name, receiver_name,caller, receiver FROM phone_calls WHERE month = 7 AND day = 28 AND duration <60;
---Suspects (Accomplices) sccording to witness #3: Sofia (Jack), Kelsey (Larry), Bruce (Robin), 
+--Suspects (Accomplices) according to witness #3: Sofia (Jack), Kelsey (Larry)(Melissa), Bruce (Robin),
+-- Taylor (James), Diana (Philip), Carina (Jacqueline), Kenny (Doris), Benista (Anna)
+
