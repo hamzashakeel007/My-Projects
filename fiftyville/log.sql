@@ -11,3 +11,5 @@ AND month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25;
 -- Suspects Vanessa (5P2BI95), Bruce (94KL13X), Barry (6P58WS2), Luca (4328GD8),
 -- Sofia (G412CB7), Iman (L93JTIZ), Diana (322W7JE), Kelsey (0NTHK55)
 -- According to witness #2 (Eugene)
+SELECT name, transaction_type, FROM people, bank_accounts WHERE people.license_plate = bakery_security_logs.license_plate
+AND month = 7 AND day = 28 AND hour = 10 AND minute >= 15 AND minute <= 25;
