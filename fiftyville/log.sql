@@ -29,3 +29,5 @@ SELECT caller_name, receiver_name,caller, receiver FROM phone_calls WHERE month 
 --Suspects (Accomplices) according to witness #3: Sofia (Jack), Kelsey (Larry)(Melissa), Bruce (Robin),
 -- Taylor (James), Diana (Philip), Carina (Jacqueline), Kenny (Doris), Benista (Anna)
 
+SELECT id, hour, minute, origin_airport_id, destination_airport_id FROM flights WHERE month = 7 AND day = 28
+ORDER BY hour ASC LIMIT 1;
