@@ -40,7 +40,7 @@ WHERE people.passport_number = passengers.passport_number AND flights.id = passe
 ORDER BY flights.hour ASC;
 -- Final suspects Doris, Sofia, Bruce, Edward, Kelsey, Taylor, Kenny, Luna
 
-SELECT name FROM people, passengers, flights, phone_calls, bank_accounts, atm_transactions, bakery_security_logs
+SELECT name FROM people, passengers, flights
 WHERE (people.passport_number = passengers.passport_number AND flights.id = passengers.flight_id AND flights.id = 36)
 AND name IN (SELECT caller_name FROM phone_calls WHERE month = 7 AND day = 28 AND duration <60)
 AND name IN (SELECT people.name FROM people, bank_accounts, atm_transactions WHERE people.id = bank_accounts.person_id AND atm_transactions.account_number = bank_accounts.account_number
