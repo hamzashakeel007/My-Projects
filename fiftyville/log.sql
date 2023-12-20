@@ -42,7 +42,7 @@ ORDER BY flights.hour ASC;
 
 SELECT name FROM people, passengers, flights
 WHERE ((people.passport_number = passengers.passport_number AND flights.id = passengers.flight_id AND flights.id = 36)
-AND name IN (SELECT caller_name FROM phone_calls WHERE month = 7 AND day = 28 AND duration <60)
+AND name IN (SELECT caller_name FROM phone_calls WHERE phone_calls.month = 7 AND phone_calls.day = 28 AND duration <60)
 AND name IN (SELECT people.name FROM people, bank_accounts, atm_transactions WHERE people.id = bank_accounts.person_id AND atm_transactions.account_number = bank_accounts.account_number
 AND atm_transactions.month = 7 AND atm_transactions.day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street')
 AND name IN (SELECT people.name FROM people, bakery_security_logs WHERE people.license_plate = bakery_security_logs.license_plate
