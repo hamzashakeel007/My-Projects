@@ -47,3 +47,5 @@ AND name IN (SELECT people.name FROM people, bank_accounts, atm_transactions WHE
 AND atm_transactions.month = 7 AND atm_transactions.day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street')
 AND name IN (SELECT people.name FROM people, bakery_security_logs WHERE people.license_plate = bakery_security_logs.license_plate
 AND bakery_security_logs.month = 7 AND bakery_security_logs.day = 28 AND bakery_security_logs.hour = 10 AND bakery_security_logs.minute >= 15 AND bakery_security_logs.minute <= 25));
+-- Thief : Bruce
+-- Accomplie: Robin (Bruce called to Robin)
