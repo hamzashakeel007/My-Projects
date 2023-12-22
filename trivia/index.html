@@ -10,17 +10,14 @@
             document.addEventListener('DOMContentLoaded', function()
             {
                 let correct = document.querySelector('#correct');
-                
-
-
+                correct.addEventListener('click', function()
+                {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#correct').innerHtml = 'Correct';
+                }
 
 
             }
-
-
-
-
-
 
 
             )
