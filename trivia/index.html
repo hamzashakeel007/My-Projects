@@ -31,8 +31,19 @@
                 // Part 2
                 document.querySelector('#answer').addEventListener('click', function()
                 {
-                    let answer = document.querySelector('input');
-                    
+                    let answer = document.querySelector("input");
+
+                    if (input.value === 'Switzerland' or input.value === 'switzerland')
+                    {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#answer').innerHtml = 'Correct';
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#answer').innerHtml = 'Incorrect';
+                    }
+
                 });
 
             });
