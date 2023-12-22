@@ -14,7 +14,7 @@
                 {
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#mcqs').innerHtml = 'Correct';
-                }
+                };
 
                 let incorrect = document.querySelectorAll('#Incorrect');
                 correct.addEventListener('click', function()
@@ -24,10 +24,8 @@
                         correct.style.backgroundColor = 'red';
                         document.querySelector('#answer').innerHtml = 'Incorrect';
                     }
-                }
-
-
-            }
+                };
+            };
 
 
             )
