@@ -9,11 +9,21 @@
             // TODO: Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function()
             {
-                let correct = document.querySelector('#correct');
+                let correct = document.querySelector('#Correct');
                 correct.addEventListener('click', function()
                 {
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#correct').innerHtml = 'Correct';
+                    document.querySelector('#mcqs').innerHtml = 'Correct';
+                }
+
+                let incorrect = document.querySelectorAll('#Incorrect');
+                correct.addEventListener('click', function()
+                {
+                    for (let i = 0; i < incorrent.length; i++)
+                    {
+                        correct.style.backgroundColor = 'red';
+                        document.querySelector('#answer').innerHtml = 'Incorrect';
+                    }
                 }
 
 
