@@ -14,18 +14,18 @@
                 {
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#mcqs').innerHtml = 'Correct';
-                };
+                }
 
                 let incorrect = document.querySelectorAll('#Incorrect');
-                correct.addEventListener('click', function()
+                incorrect.addEventListener('click', function()
                 {
-                    for (let i = 0; i < incorrent.length; i++)
+                    for (let i = 0; i < incorrect.length; i++)
                     {
-                        correct.style.backgroundColor = 'red';
+                        incorrect.style.backgroundColor = 'red';
                         document.querySelector('#answer').innerHtml = 'Incorrect';
                     }
-                };
-            };
+                }
+            }
 
 
             )
