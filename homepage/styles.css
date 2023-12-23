@@ -18,6 +18,15 @@
   h1 {
     text-align: center; /* Indent in center */
     text-decoration-line: underline;
+    background-color: #333230;
+    font-weight: bold;
+    color: #a8622f;
+    }
+
+  h2 {
+    text-align: center; /* Indent in center */
+    text-decoration-line: underline;
+    font-style: italic;
     }
 
   nav {
