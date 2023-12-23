@@ -25,9 +25,9 @@ h1 {
   }
 
   .container {
-    background-color: #0d83b5;
+    background-color: white;
     color: white;
-    margin: 20px;
+    margin: 0;
     padding: 20px;
   }
 
