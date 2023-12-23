@@ -1,8 +1,10 @@
 
 html {
-    margin: 20px 30px; /* Adds 15px of padding around all sides of paragraphs */
+    margin: 20px 30px; /* Margin around all sides of doc */
   }
 
-  h1 {
-    text-align: center; /* Indent the first line by 20 pixels */
+h1 {
+    text-align: center; /* Indent in center */
   }
+
+  
