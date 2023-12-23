@@ -10,6 +10,8 @@ h1 {
   nav {
     padding: 10px; /* Padding for content */
     text-align: right;
+    font-weight: bold;
+    font-style: times;
   }
 
   a {
