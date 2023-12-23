@@ -7,41 +7,40 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.addEventListener('DOMContentLoaded', function()
+            document.addEventListener("DOMContentLoaded", function()
             {
                 // Part 1
-                let correct = document.querySelector('#Correct');
+                let correct = document.querySelector('#correct');
                 correct.addEventListener('click', function()
                 {
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#mcqs').innerHtml = 'Correct';
+                    document.querySelector('#mcqs').innerHTML = 'Correct';
                 });
 
-                let incorrect = document.querySelectorAll('#Incorrect');
-                incorrect.addEventListener('click', function()
+                let incorrect = document.querySelectorAll('#incorrect');
+                for (let i = 0; i < incorrect.length; i++)
                 {
-                    for (let i = 0; i < incorrect.length; i++)
+                    incorrect[i].addEventListener('click', function()
                     {
-                        incorrect.style.backgroundColor = 'red';
-                        document.querySelector('#mcqs').innerHtml = 'Incorrect';
-                    }
-                });
-
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#mcqs').innerHTML = 'Incorrect';
+                    });
+                }
 
                 // Part 2
-                document.querySelector('#answer').addEventListener('click', function()
+                document.querySelector('#check').addEventListener('click', function()
                 {
-                    let answer = document.querySelector("input");
+                    let answer = document.querySelector('input');
 
-                    if (input.value === 'Switzerland' or input.value === 'switzerland')
+                    if (answer.value === 'Switzerland' || answer.value === 'switzerland')
                     {
-                        input.style.backgroundColor = 'green';
-                        document.querySelector('#answer').innerHtml = 'Correct';
+                        answer.style.backgroundColor = 'green';
+                        document.querySelector('#answer').innerHTML = 'Correct';
                     }
                     else
                     {
-                        input.style.backgroundColor = 'red';
-                        document.querySelector('#answer').innerHtml = 'Incorrect';
+                        answer.style.backgroundColor = 'red';
+                        document.querySelector('#answer').innerHTML = 'Incorrect';
                     }
 
                 });
@@ -49,7 +48,7 @@
             });
         </script>
     </head>
-    
+
     <body>
         <div class="header">
             <h1>Trivia!</h1>
@@ -58,26 +57,29 @@
         <div class="container">
             <div class="section">
                 <h2>Part 1: Multiple Choice </h2>
+                <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
-                <button id='Incorrect'>6 people per 1 sheep</button>
-                <button id='Incorrect'>3 people per 1 sheep</button>
-                <button id='Incorrect'>1 person per 1 sheep"</button>
-                <button id='Incorrect'>1 person per 3 sheep</button>
-                <button id='Correct'>1 person per 6 sheep</button>
 
-                <p>id='mcqs'</p>
+                <button id="incorrect">6 people per 1 sheep</button>
+                <button id="incorrect">3 people per 1 sheep</button>
+                <button id="incorrect">1 person per 1 sheep</button>
+                <button id="incorrect">1 person per 3 sheep</button>
+                <button id="correct">1 person per 6 sheep</button>
+
+                <p id='mcqs'></p>
 
             </div>
 
             <div class="section">
                 <h2>Part 2: Free Response</h2>
+                <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
                 <input type="text"></input>
-                <button>Check Answer</button>
+                <button id="check">Check Answer</button>
 
-                <p>id='answer'</p>
+                <p id="answer"></p>
 
             </div>
         </div>
