@@ -7,4 +7,15 @@ h1 {
     text-align: center; /* Indent in center */
   }
 
-  
+  nav {
+    padding: 10px; /* Padding for content */
+    text-align: right;
+  }
+
+  a {
+    padding: 10px; /* Padding for content */
+  }
+
+
+
+
