@@ -17,6 +17,7 @@
 
   h1 {
     text-align: center; /* Indent in center */
+    text-decoration-line: underline;
     }
 
   nav {
