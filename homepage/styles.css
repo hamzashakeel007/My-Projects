@@ -1,9 +1,16 @@
 
 html {
     margin: 20px 30px; /* Margin around all sides of doc */
+    font-family: Tahoma, Verdana, sans-serif;
   }
 
-h1 {
+
+  p {
+    text-align: left; /* Indent in center */
+    font-size: 20px;
+  }
+
+  h1 {
     text-align: center; /* Indent in center */
   }
 
@@ -12,6 +19,7 @@ h1 {
     text-align: right;
     font-weight: bold;
     font-style: times;
+    font-family: Tahoma, Verdana, sans-serif;
   }
 
   a {
