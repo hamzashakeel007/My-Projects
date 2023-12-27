@@ -37,7 +37,7 @@ def index():
     """Show portfolio of stocks"""
     # show user's shares/stocks
     shares = db.exceute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id = :user_id GROUP BY symbol HAVING cumulative_shares > 0",
-                         user_id=session["user_id"])
+                        user_id=session["user_id"])
 
     # show user's cash/money
     cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
