@@ -41,7 +41,10 @@ def index():
     # show user's cash/money
     cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
-    
+
+    return render_template("index.html")
+
+
 
     return apology("index")
 @app.route("/buy", methods=["GET", "POST"])
