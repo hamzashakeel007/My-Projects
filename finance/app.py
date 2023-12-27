@@ -41,10 +41,18 @@ def index():
     # show user's cash/money
     cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
+    #initialize total values
 
-    return render_template("index.html")
+    grand_total = cash
 
-    return apology("index")
+    for share in shares:
+        quote = lookup(share["symbol"])
+        share["name"] = quote["name"]
+        share["price"] = quote["price"]
+        share["value"] = share["price"] * share["cumulative_shares"]
+        grand_total = grand_total + share["value"]
+
+    return render_template("index.html", shares=shares, cash=cash, grand_total=grand_total)
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
