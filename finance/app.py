@@ -35,6 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    
     # show user's shares/stocks
     shares = db.execute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id = :user_id GROUP BY symbol HAVING cumulative_shares > 0",
                         user_id=session["user_id"])
