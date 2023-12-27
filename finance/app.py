@@ -124,8 +124,13 @@ def register():
             return apology("must provide password", 403)
 
         # Ensure password confirmation was submitted
-        elif not request.form.get("password"):
+        elif not request.form.get("confirmation"):
             return apology("must confirm password", 403)
+
+        # Ensure password submission and confirmation matches
+        elif not request.form.get("password") != elif not request.form.get("confirmation"):
+            return apology("Ensure that passwords match", 403)
+
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
