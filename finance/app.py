@@ -58,8 +58,19 @@ def buy():
         elif not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("number of shares can not be in negative")
         quote = lookup(symbol)
-        if quote 
+        if quote is None:
+            return apology("symbol not found")
 
+        price = quote["price"]
+        total_cost = int(shares)*price
+        cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+
+        if cash < total_cost:
+            return apology("not enough cash")
+
+        # Update user's data
+
+        db.exceute("UPDATE users SET cash = cash - :total_cost WHERE id = :user_id", total_cost=total_cost, user_id=session["user_id"])
 
 
 
