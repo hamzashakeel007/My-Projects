@@ -35,26 +35,25 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return render_template("index.html")
     # show user's shares/stocks
-    # shares = db.exceute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id = :user_id GROUP BY symbol HAVING cumulative_shares > 0",
-    #                     user_id=session["user_id"])
+    shares = db.execute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id = :user_id GROUP BY symbol HAVING cumulative_shares > 0",
+                        user_id=session["user_id"])
 
-    # # show user's cash/money
-    # cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+    # show user's cash/money
+    cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
-    # #initialize total values
+    #initialize total values
 
-    # grand_total = cash
+    grand_total = cash
 
-    # for share in shares:
-    #     quote = lookup(share["symbol"])
-    #     share["name"] = quote["name"]
-    #     share["price"] = quote["price"]
-    #     share["value"] = share["price"] * share["cumulative_shares"]
-    #     grand_total = grand_total + share["value"]
+    for share in shares:
+        quote = lookup(share["symbol"])
+        share["name"] = quote["name"]
+        share["price"] = quote["price"]
+        share["value"] = share["price"] * share["cumulative_shares"]
+        grand_total = grand_total + share["value"]
 
-    # return render_template("index.html", shares=shares, cash=cash, grand_total=grand_total)
+    return render_template("index.html", shares=shares, cash=cash, grand_total=grand_total)
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -73,16 +72,16 @@ def buy():
 
         price = quote["price"]
         total_cost = int(shares)*price
-        cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+        cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
         if cash < total_cost:
             return apology("not enough cash")
 
         # Update user's data
-        db.exceute("UPDATE users SET cash = cash - :total_cost WHERE id = :user_id", total_cost=total_cost, user_id=session["user_id"])
+        db.execute("UPDATE users SET cash = cash - :total_cost WHERE id = :user_id", total_cost=total_cost, user_id=session["user_id"])
 
         # Accounting purchase in history
-        db.exceute("INSERT INTO transactions (user_id, price, symbol, shares) VALUES(:user_id, :price, :symbol, :shares)",
+        db.execute("INSERT INTO transactions (user_id, price, symbol, shares) VALUES(:user_id, :price, :symbol, :shares)",
                    user_id=session["user_id"], symbol=symbol, shares=shares, price=price)
         return redirect("/")
 
