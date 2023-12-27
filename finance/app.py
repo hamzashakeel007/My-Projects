@@ -35,25 +35,26 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    return render_template("index.html")
     # show user's shares/stocks
-    shares = db.exceute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id = :user_id GROUP BY symbol HAVING cumulative_shares > 0",
-                        user_id=session["user_id"])
+    # shares = db.exceute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id = :user_id GROUP BY symbol HAVING cumulative_shares > 0",
+    #                     user_id=session["user_id"])
 
-    # show user's cash/money
-    cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+    # # show user's cash/money
+    # cash = db.exceute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
-    #initialize total values
+    # #initialize total values
 
-    grand_total = cash
+    # grand_total = cash
 
-    for share in shares:
-        quote = lookup(share["symbol"])
-        share["name"] = quote["name"]
-        share["price"] = quote["price"]
-        share["value"] = share["price"] * share["cumulative_shares"]
-        grand_total = grand_total + share["value"]
+    # for share in shares:
+    #     quote = lookup(share["symbol"])
+    #     share["name"] = quote["name"]
+    #     share["price"] = quote["price"]
+    #     share["value"] = share["price"] * share["cumulative_shares"]
+    #     grand_total = grand_total + share["value"]
 
-    return render_template("index.html", shares=shares, cash=cash, grand_total=grand_total)
+    # return render_template("index.html", shares=shares, cash=cash, grand_total=grand_total)
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
