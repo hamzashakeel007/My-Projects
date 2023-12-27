@@ -36,7 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # show user's shares/stocks
-    shares = db.exceute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id =)
+    shares = db.exceute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id = :user_id)
     return apology("index")
 
 
