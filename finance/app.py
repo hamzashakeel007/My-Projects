@@ -71,6 +71,9 @@ def buy():
         # Update user's data
         db.exceute("UPDATE users SET cash = cash - :total_cost WHERE id = :user_id", total_cost=total_cost, user_id=session["user_id"])
 
+        # Accounting purchase in history
+        db.exceute("INSERT INTO transactions (user_id, price, symbol, shares) VALUES(:user_id, :price, :symbol, :shares)",
+                   total_cost=total_cost, user_id=session["user_id"])
 
 
 @app.route("/history")
