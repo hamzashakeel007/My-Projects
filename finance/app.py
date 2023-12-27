@@ -44,16 +44,24 @@ def index():
 
     return render_template("index.html")
 
-
-
     return apology("index")
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
-    # if request.method == "POST":
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        if not symbol:
+            return apology("symbol not provided")
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("number of shares can not be in negative")
+        quote = lookup(symbol)
+        if quote 
 
-    return apology("buy")
+
+
 
 
 @app.route("/history")
