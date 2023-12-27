@@ -35,6 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    # show user's shares/stocks
+    shares = db.exceute("SELECT symbol, SUM(shares) as cumulative_shares FROM transactions WHERE user_id =)
     return apology("index")
 
 
@@ -43,7 +45,7 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
-        
+
     return apology("buy")
 
 
