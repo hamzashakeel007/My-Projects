@@ -69,9 +69,7 @@ def buy():
             return apology("not enough cash")
 
         # Update user's data
-
         db.exceute("UPDATE users SET cash = cash - :total_cost WHERE id = :user_id", total_cost=total_cost, user_id=session["user_id"])
-
 
 
 
