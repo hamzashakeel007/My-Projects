@@ -73,7 +73,11 @@ def buy():
 
         # Accounting purchase in history
         db.exceute("INSERT INTO transactions (user_id, price, symbol, shares) VALUES(:user_id, :price, :symbol, :shares)",
-                   total_cost=total_cost, user_id=session["user_id"])
+                   user_id=session["user_id"], symbol=symbol, shares=shares, price=price)
+        return redirect("/")
+
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")

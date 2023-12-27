@@ -1,22 +1,15 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Quote
+    Buy
 {% endblock %}
 
 {% block main %}
-    <h1>Get a Stock(s) Quote</h1>
+    <h1>Buy Stock(s)</h1>
     <form action="/buy" method="post">
         <input type=text id=symbol name=symbol placeholder='Symbol'>
-        <button type="submit">Get Quote</button>
+        <input type=text id=shares name=shares placeholder='Shares'>
+        <button type="submit">Buy</button>
     </form>
-
-    {% if quote %}
-    <pre></pre>
-    <h3>Name:{{ quote['name'] }} Symbol:{{ quote['symbol'] }}</h3>
-    <p><pre></pre>Price: ${{ quote['price']}}</p>
-
-
-    {% endif %}
 
 {% endblock %}
