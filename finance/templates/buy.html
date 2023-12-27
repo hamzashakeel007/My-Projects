@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h1>Get a Stock(s) Quote</h1>
+    <form action="/quote" method="post">
+        <input type=text id=symbol name=symbol placeholder='Symbol'>
+        <button type="submit">Get Quote</button>
+    </form>
+
+    {% if quote %}
+    <pre></pre>
+    <h3>Name:{{ quote['name'] }} Symbol:{{ quote['symbol'] }}</h3>
+    <p><pre></pre>Price: ${{ quote['price']}}</p>
+
+
+    {% endif %}
+
+{% endblock %}
