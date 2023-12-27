@@ -131,12 +131,15 @@ def register():
         elif request.form.get("password") != request.form.get("confirmpassword"):
             return apology("Ensure that passwords match", 403)
 
-
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         if len(rows) != 0:
             return apology("username already exists", 403)
+
+        # insert new user into the database
+        db.execute("INSERT INTO users (username, hash) VALUES(?,?)", request.form.get("username"),
+                   generate_password_hash(request.form.get("password")))
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
