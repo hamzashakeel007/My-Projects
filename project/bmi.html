@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <a href="index.html"><h4>Health Calculator</h4></a>
+    <br>
+    <h1>BMI Calculator</h1>
+
+    <button id="button1" class="active" onclick="setActive('male')">Male</button>
+    <button id="button2" onclick="setActive('female')">Female</button>
+    <br><br>
+    <script src="script.js"></script>
+
+    <div id="inputs">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" required>
+        <br>
+
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" required>
+        <br><br>
+
+        <button type="button" id="calculate-btn">Calculate BMI</button>
+    </div>
+    <p1 id="result"></p1>
+    <br><br>
+
+    <h5>BMI Interpretation</h5>
+    <div class="bmi-category">
+        <h6>Underweight (BMI below 18.5)</h6>
+        <p>Consult a healthcare professional for potential health risks.</p>
+    </div>
+    <div class="bmi-category">
+        <h6>Healthy Weight (BMI 18.5-24.9)</h6>
+        <p>Aim for a balanced diet and regular activity.</p>
+    </div>
+    <div class="bmi-category">
+        <h6>Overweight (BMI 25-29.9)</h6>
+        <p>Consider lifestyle changes (diet, exercise) to improve health.</p>
+    </div>
+    <div class="bmi-category">
+        <h6>Obese (BMI 30 or above)</h6>
+        <p>Increased risk of health problems. Consult a healthcare professional for guidance and support.</p>
+    </div>
+    <br><br>
+
+    <h3>What is Body Mass Index (BMI)?</h3>
+    <ul>
+        <li>A simple calculation of weight in relation to height.</li>
+        <li>Calculated as BMI = weight (kg) / height (m²).</li>
+        <li>A general indicator of weight status, but not a perfect measure of health.</li>
+        <li>Limitations: doesn't account for muscle mass, bone density, or body composition.</li>
+    </ul>
+
+    <script src="bmi.js"></script>
+</body>
+</html>

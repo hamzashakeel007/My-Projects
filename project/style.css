@@ -1,4 +1,50 @@
 
+body {
+    padding: 30px 310px;
+  }
 
+  h1 {
+    margin-bottom: 20px;
+  }
 
+  p {
+    font-style: italic;
+  }
+
+  button {
+    background-color: #e0e0e0;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #cccccc;
+  }
+
+  #button1.active {
+    background-color: #4395d9;
+    color: white;
+  }
+
+  #button2.active {
+    background-color: #4395d9;
+    color: white;
+  }
+
+  .bmi-category {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  .bmi-category h6 {
+    font-weight: bold;
+    text-align: center;
+  }
+  .bmi-category p {
+    text-align: center;
+    margin-bottom: 0;
+  }
 
