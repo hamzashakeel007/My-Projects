@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif; /* Similar to Google's font */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem; /* Similar to Google's heading size */
+  font-weight: bold;
+  color: #333;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+main {
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-input {
+  width: 400px; /* Adjust width as needed */
+  padding: 1rem;
+  border-radius: 500px 110 110 500px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none; /* Remove default outline */
+}
+
+.search-input:focus {
+  border-color: #999;
+}
+
+.search-button {
+  background-color: #4285f4;
+  
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.search-input {
+    width: 400px; /* Adjust width as needed */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Apply rounded corners to left and right edges */
+    font-size: 1rem;
+    outline: none; /* Remove default outline */
+    transition: transform 0.2s ease-in-out;
+  }
+
+.search-button:hover {
+  background-color: #337cbf;
+}
+
+.feeling-lucky {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+  
+  .feeling-lucky:hover {
+    background-color: #eee; /* Light background on hover */
+  }
+
+.advanced-options {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.advanced-options label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+  width: 150px;
+}
+
+.advanced-button {
+  background-color: #1a73e8; /* Similar to Google's advanced search button blue */
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.advanced-button:hover {
+  background-color: #1565c0;
+}
