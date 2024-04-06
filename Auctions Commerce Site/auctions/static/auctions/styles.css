@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+    margin-left: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.alert {
+    margin-top: 10px;
+}
+
+.listing-details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.listing-details img {
+    margin-bottom: 10px;
+}
+
+.bid-form, .comment-form {
+    margin-top: 10px;
+}
+
+.nav {
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+h1, h2, h3 {
+    margin-top: 10px;
+}
+
+hr {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+ul {
+    padding: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+

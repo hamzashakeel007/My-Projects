@@ -1,0 +1,22 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h1>My Listings</h1>
+
+    {% if user.is_authenticated %}
+        {% if listings %}
+            <ul>
+                {% for listing in listings %}
+                    <li>
+                        <a href="{% url 'listing_detail' listing.id %}">{{ listing.title }}</a> Current Price - {{ listing.current_price }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>You haven't created any listings yet.</p>
+        {% endif %}
+    {% else %}
+        <p>Please log in to view your listings.</p>
+    {% endif %}
+
+{% endblock %}

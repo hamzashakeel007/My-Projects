@@ -1,0 +1,87 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+{% if user.is_authenticated %}
+    
+
+    {% if listing.active == False and highest_bidder_username and request.user.username == highest_bidder_username %}
+        <h3>Congratulations! You won the auction for {{ listing.title }}
+    {% elif listing.active == False and highest_bidder_username and request.user.username != highest_bidder_username%}
+        <h3>You lost the auction for {{ listing.title }}</h3>
+    {% elif listing.active == False %}
+        <h3> Auction closed for {{ listing.title }}</h3>
+    {% endif %}
+
+
+    <h1>{{ listing.title }}</h1>
+    <p><strong>Description:</strong> {{ listing.description }}</p>
+
+    <div class="listing-details">
+        {% if listing.image_url %}
+            <img src="{{ listing.image_url }}" alt="{{ listing.title }} image" width="200" height="200">
+        {% endif %}
+        <p><strong>Starting Bid:</strong> ${{ listing.starting_bid }}</p>
+        <p><strong>Current Price:</strong> ${{ listing.current_price }}</p>
+        <p><strong>Category:</strong> {{ listing.category }}</p>
+        <p><strong>Active:</strong> {{ listing.active }}</p>
+
+    </div>
+
+
+    <!-- only users other than the users that created their own listings may Add to Watchlist -->
+    {% if listing.seller != user  %}
+    <form method="post" action="{% url 'watchlist' %}">  
+        {% csrf_token %}
+        <input type="hidden" name="listing_id" value="{{ listing.id }}">
+        <button type="submit">Add to Watchlist</button>
+    </form>
+    {% endif %}
+
+    <!-- only users other than the users that created their own listings may place bids -->
+    <!-- and only place bids for active listings / unable to place bids once auction is closed -->
+    {% if listing.seller != user and listing.active %} 
+    <h2>Place a Bid</h2>
+    <form method="post" action="{% url 'place_bid' listing.id %}">
+        {% csrf_token %}
+        {% if bid_error %}
+            <p style="color: red;">{{ bid_error }}</p>
+        {% endif %}
+        {{ bid_form.as_p }}
+        <input type="submit" value="Place Bid">
+    </form>
+    {% endif %}
+
+    <!-- only the users who created their own listings may close the auction -->
+    {% if listing.active and listing.seller == user %} 
+        <form method="post" action="{% url 'close_listing' listing.id %}">
+            {% csrf_token %}
+            <button type="submit">Close Auction</button>
+        </form>
+    {% endif %}
+
+    
+    <h2>Bids</h2>
+    {% for bid in bids %}
+        <p><strong>{{ bid.user.username }} bid ${{ bid.amount }} at {{ bid.placed_at }}</strong></p>
+    {% empty %}
+        <p>No bids have been placed yet.</p>
+    {% endfor %}
+
+    <h2>Comments</h2>
+    <form method="post" action="{% url 'add_comment' listing.id %}">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <input type="submit" value="Add Comment">
+    </form>
+
+    {% for comment in comments %}
+        <p><strong>{{ comment.user.username }}:</strong> {{ comment.content }}</p>
+    {% empty %}
+        <p>No comments have been added yet.</p>
+    {% endfor %}
+
+
+{% endif %}
+
+{% endblock %}

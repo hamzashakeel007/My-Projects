@@ -1,0 +1,35 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+    <div class="nav" >
+        <a class="nav-link" href="{% url 'my_listings' %}">My Listings</a>
+        <a class="nav-link" href="{% url 'watchlist' %}">My Watchlist</a>
+        <a class="nav-link" href="{% url 'categories' %}">Categories</a>
+    </div>
+        <h2>Active Listings</h2>
+        <ul>
+            {% for listing in active_listings %}
+            <br>
+            <li>
+                <a href="{% url 'listing_detail' listing.id %}">{{ listing.title }}</a> Description: {{ listing.description }} Current Price: ${{ listing.current_price }}
+                <br>
+                <br>
+                {% if listing.image_url %}
+                    <img style="margin-left: 50px;"  src="{{ listing.image_url }}" width="300" height="200">
+                {% else %}
+                    No Image
+                {% endif %}
+            </li>
+            <br>
+            <hr>
+            
+            {% endfor %}
+        </ul>
+        <br>
+  
+        <a href="{% url 'create_listing' %}">Create a New Listing</a>
+    {% endif %}
+{% endblock %}
+
+
