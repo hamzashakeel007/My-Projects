@@ -1,6 +1,6 @@
 # Mail 
 
-This single-page-app project implements a basic email client featuring:
+This single-page web application implements an email service, featuring:
 
 * Inbox view displaying email summaries
 * Individual email view
