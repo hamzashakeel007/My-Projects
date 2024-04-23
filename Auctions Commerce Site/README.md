@@ -1,4 +1,4 @@
-## Aucions Commerce Site
+## Aucions Commerce Site 
 
 ### Empowering Online Auctions with Django
 
