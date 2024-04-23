@@ -34,7 +34,6 @@ This single-page-app project implements a basic email client featuring:
 **Note:**
 
 * Reply functionality leverages pre-filling the recipient, subject, and body fields in the compose view but might require additional logic in your project's API for handling reply actions.
-* Sent and Archived email functionalities are not currently implemented in this basic version.
 
 
 ## Technology Stack
